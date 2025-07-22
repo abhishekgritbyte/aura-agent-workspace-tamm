@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Monitor, Users, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
 import HolographicInterface from '@/components/HolographicInterface';
 import AgentWorkspace from '@/components/AgentWorkspace';
-import tammLogo from '@/assets/tamm-logo.png';
+import tammLogo from '@/assets/tamm-logo.jfif';
 
 type ViewMode = 'home' | 'customer' | 'agent';
 

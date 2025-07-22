@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Globe, User, Phone, PhoneOff } from 'lucide-react';
-import tammLogo from '@/assets/tamm-logo.png';
+import tammLogo from '@/assets/tamm-logo.jfif';
 import holographicBg from '@/assets/holographic-bg.jpg';
 
 type ViewState = 'welcome' | 'language-selection' | 'connecting' | 'in-call';
