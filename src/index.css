@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TAMM Design System - UAE Government Branding
+All colors follow UAE government design system with HSL values.
+*/
+
+@layer base {
+  :root {
+    /* Core TAMM Brand Colors */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    /* UAE Gold Primary */
+    --primary: 45 68% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 45 75% 65%;
+
+    /* Tech Blue Secondary */
+    --secondary: 215 100% 59%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted tones using AE Black palette */
+    --muted: 220 8% 95%;
+    --muted-foreground: 220 8% 45%;
+
+    /* Sea Blue Accent */
+    --accent: 195 100% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    /* AE Red for destructive */
+    --destructive: 4 74% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UAE Green for success */
+    --success: 145 48% 49%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 45 68% 54%;
+
+    --radius: 0.75rem;
+
+    /* Holographic Interface Colors */
+    --holographic-primary: 195 100% 46%;
+    --holographic-secondary: 45 68% 54%;
+    --holographic-bg: 220 15% 8%;
+    --holographic-overlay: 220 15% 12%;
+
+    /* Glass Effects */
+    --glass-bg: 0 0% 100% / 0.1;
+    --glass-border: 0 0% 100% / 0.2;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-holographic: linear-gradient(135deg, hsl(var(--holographic-primary)), hsl(var(--holographic-secondary)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg)), hsl(var(--glass-border)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-holographic: 0 0 60px hsl(var(--holographic-primary) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Holographic theme */
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 75% 65%;
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 215 100% 70%;
+    --secondary-foreground: 220 15% 8%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 8% 65%;
+
+    --accent: 195 100% 60%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 4 85% 65%;
+    --destructive-foreground: 220 15% 8%;
+
+    --success: 145 60% 55%;
+    --success-foreground: 220 15% 8%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 45 75% 65%;
+
+    /* Enhanced holographic colors for dark mode */
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Holographic Glass Effect */
+  .glass {
+    @apply backdrop-blur-md bg-glass-bg border border-glass-border;
+  }
+
+  /* Glowing Button Effect */
+  .btn-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  /* Holographic Text Effect */
+  .text-holographic {
+    @apply bg-gradient-to-r from-holographic-primary to-holographic-secondary bg-clip-text text-transparent;
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  /* Pulse Glow Animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  /* Scale hover effect */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary-glow) / 0.6); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
